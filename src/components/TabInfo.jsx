@@ -62,7 +62,7 @@ export default function TabInfo() {
             <p>• Versi: <span className="text-white font-semibold">1.0.0</span></p>
             <p>• Dibuat dengan: <span className="text-white font-semibold">React + Tailwind CSS v3</span></p>
             <p>• Data tersimpan di <span className="text-white font-semibold">localStorage browser</span></p>
-            <p>• Bekerja <span className="text-white font-semibold">100% offline</span></p>
+            {/* <p>• Bekerja <span className="text-white font-semibold">100% offline</span></p> */}
             <p>• Backup via fitur <span className="text-white font-semibold">Export CSV</span></p>
           </div>
         </div>
