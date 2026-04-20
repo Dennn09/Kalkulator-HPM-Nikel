@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0f1117;
+    color: #e8eaf2;
+    font-family: 'Syne', sans-serif;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] { -moz-appearance: textfield; }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface border border-border rounded-2xl p-5 mb-5;
+  }
+  .card-title {
+    @apply font-mono text-[10px] tracking-[2px] uppercase text-muted mb-4 flex items-center gap-2;
+  }
+  .card-title::before {
+    content: '';
+    @apply w-[3px] h-3 bg-ni rounded-sm block;
+  }
+  .input-field {
+    @apply w-full bg-surface2 border border-border rounded-xl px-3 py-2.5
+           font-mono text-xl font-semibold text-white outline-none
+           transition-colors duration-200 focus:border-ni;
+  }
+  .badge {
+    @apply font-mono text-[10px] px-2 py-0.5 rounded font-semibold;
+  }
+  .badge-ok   { @apply bg-success/15 text-success border border-success/30; }
+  .badge-warn { @apply bg-danger/15 text-danger border border-danger/30; }
+  .btn {
+    @apply px-4 py-2 rounded-lg font-sans font-semibold text-sm transition-all duration-200 cursor-pointer border-0;
+  }
+  .btn-primary { @apply bg-ni text-bg hover:brightness-110; }
+  .btn-danger  { @apply bg-danger/15 text-danger border border-danger/30 hover:bg-danger/25; }
+  .btn-outline { @apply bg-transparent text-muted border border-border hover:text-white hover:border-ni; }
+  .tab-btn {
+    @apply px-4 py-2 rounded-[9px] font-sans text-[13px] font-semibold text-muted
+           transition-all duration-200 cursor-pointer border-0 bg-transparent whitespace-nowrap;
+  }
+  .tab-btn:hover:not(.active) { @apply text-white bg-border; }
+  .tab-btn.active { @apply bg-ni text-bg; }
+  .result-card {
+    @apply bg-surface2 rounded-xl p-4 mb-2.5 border-l-[3px] transition-all duration-300;
+  }
+  .element-badge {
+    @apply w-7 h-7 rounded-md flex items-center justify-center font-mono text-[10px] font-bold;
+  }
+  .range-bar {
+    @apply relative h-1.5 bg-border rounded-full my-2;
+  }
+  .formula-chip {
+    @apply px-1.5 py-0.5 rounded text-[10px] font-mono font-semibold;
+  }
+}
